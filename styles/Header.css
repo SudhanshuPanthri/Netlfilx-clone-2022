@@ -1,0 +1,40 @@
+.headerParent{
+    height:10vh;
+    width:100vw;
+    /* border:2px solid red; */
+    background-color: transparent;
+    position: fixed;
+}
+
+.headerWrapper{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.logoWrapper{
+    margin:0 20px;
+}
+
+.list{
+    display: flex;
+}
+
+.item{
+    margin:0 10px;
+    list-style: none;
+    font-weight: 500;
+    color:whitesmoke;
+}
+
+.item:hover{
+    cursor: pointer;
+    color:red;
+    transition:all 0.3s ease-in-out;
+}
+
+@media screen and (max-width:768px){
+    .list{
+        display: none;
+    }
+}
