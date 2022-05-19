@@ -1,9 +1,10 @@
 .headerParent{
     height:10vh;
     width:100vw;
-    /* border:2px solid red; */
-    background-color: transparent;
     position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .headerWrapper{
@@ -31,6 +32,25 @@
     cursor: pointer;
     color:red;
     transition:all 0.3s ease-in-out;
+}
+
+.iconWrapper{
+    /* border:2px solid white; */
+    padding:10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon{
+    color:whitesmoke;
+    font-size: 24px;
+    margin:0 10px;
+    cursor:pointer
+}
+
+.hidden{
+    display: none;
 }
 
 @media screen and (max-width:768px){

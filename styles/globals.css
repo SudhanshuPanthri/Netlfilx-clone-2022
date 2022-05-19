@@ -5,6 +5,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     background-color: #141414;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -14,4 +15,18 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.parent{
+  height: 100vh;
+  /* width:100vw; */
+  background-image: linear-gradient( rgba(56, 56, 56, 0.978), #010511);
+}
+
+/* for medium/large devices  */
+
+@media screen and (min-width:768px){
+  .parent{
+    height: 140vh;
+  }
 }
