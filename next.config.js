@@ -5,6 +5,6 @@ const nextConfig = {
 
 module.exports = {
   images: {
-    domains: ["iconscout.com"],
+    domains: ["iconscout.com", "image.tmdb.org"],
   },
 };
