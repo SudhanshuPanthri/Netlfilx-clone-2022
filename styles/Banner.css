@@ -129,15 +129,22 @@
     }
 
     .bannerParent{
-        height: 80vh;
+        height: 100vh;
     }
 
     .bannerWrapper{
-        height: 80vh;
+        height: 100vh;
     }
 
     .btn{
         width:80px;
         font-size: 14px;
+    }
+
+    .bannerInfo{
+        top:300px;
+    }
+    .bannerTitle{
+        top:260px;
     }
 }
