@@ -1,12 +1,28 @@
 .thumbnailParent{
-    z-index: 100;
     position: relative;
-    height:100px;
-    width:20rem;
-    /* border:2px solid red; */
+    height: 80%;
+    width:300px;
+    margin:0 20px;
+    cursor: pointer;
 }
 
 .cardImg{
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  width: 100%;
+  max-height: 150px;
+  border-radius: 8px;
+  box-shadow: 2px 4px 6px -2px #000;
+  margin-right: 14px;
+}
+
+.cardImg:hover{
+    opacity: 0.78;
+    transition:all 0.3s ease-in-out;
+    transform: scale(1.06);
+}
+
+@media screen and (max-width:768px){
+  .thumbnailParent{
+    width:200px;
+  }
 }

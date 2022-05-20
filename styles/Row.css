@@ -1,13 +1,25 @@
 .rowParent{
-    height: 12rem;
+    position: relative;
+    height: 14rem;
+    overflow-y: scroll;
 }
+/* Hide scrollbar for Chrome, Safari and Opera */
+.rowParent::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .rowParent {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
 
-
-.rowTitle{
-    margin:20px;
+h2{
+    margin:15px 20px;
     width:13rem;
     color:#e5e5e5;
     font-size: 24px;
+    cursor: pointer;
 }
 
 .rowTitle:hover{
@@ -16,50 +28,49 @@
     color: white;
 }
 
-.scrollerWrapper{
-    position: relative;
-    height: 20rem;
-    border:2px solid red;
-}
-
-
 .scrollerLeft{
     position: absolute;
     color:whitesmoke;
     cursor: pointer;
-    bottom: 50px;
-    top:50px;
-    left:20px;
+    top:300px;
+    left:0;
     z-index: 40;
-    font-size: 24px;
-    opacity: 0;
+    font-size: 30px;
+    /* opacity: 0; */
 }
+
 
 .scrollerRight{
     position: absolute;
-    right:20px;
+    /* left:22%; */
+    /* top:50%; */
+    /* bottom: 50%; */
+    right: 0;
     color:whitesmoke;
-    bottom: 50px;
-    top:50px;
     cursor: pointer;
-    font-size: 24px;
-    opacity: 0;
+    font-size: 30px;
+    /* opacity: 0; */
+    z-index: 40;
 }
+
 
 .thumbnailWrapper{
-    height:10rem;
-    border:1px solid white;
-    width: 100%;
+    z-index: 40;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 
-.rowParent:hover > .scrollerWrapper>.scrollerLeft{
+.rowParent:hover >.scrollerLeft{
     opacity: 1;
     transition: all 0.3s ease-in-out;
     /* transform:scale(1.06); */
 }
 
-.rowParent:hover > .scrollerWrapper>.scrollerRight{
+.rowParent:hover >.scrollerRight{
     opacity: 1;
     transition: all 0.3s ease-in-out;
     /* transform:scale(1.06); */
@@ -68,6 +79,13 @@
 
 @media screen and (max-width:768px){
     .rowTitle{
-        font-size: 18px;
+        font-size: 16px;
+    }
+
+    /* .thumbnailWrapper{
+        height: 80%;
+    } */
+    .rowParent{
+        height: 16vh;
     }
 }

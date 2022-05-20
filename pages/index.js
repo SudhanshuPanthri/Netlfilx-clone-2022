@@ -15,7 +15,7 @@ export default function Home({
   documentaries,
 }) {
   return (
-    <div className="parent">
+    <div className="">
       <Head>
         <title>Netflix</title>
       </Head>

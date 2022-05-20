@@ -42,6 +42,8 @@ a {
 
 .rowWrapper{
   z-index:40;
+  height: 100%;
+  width:99..2vw;
 }
 
 /* for medium/large devices  */
