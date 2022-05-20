@@ -1,0 +1,73 @@
+.rowParent{
+    height: 12rem;
+}
+
+
+.rowTitle{
+    margin:20px;
+    width:13rem;
+    color:#e5e5e5;
+    font-size: 24px;
+}
+
+.rowTitle:hover{
+    transform: scale(1.04);
+    transition: all 0.3s ease-in-out;
+    color: white;
+}
+
+.scrollerWrapper{
+    position: relative;
+    height: 20rem;
+    border:2px solid red;
+}
+
+
+.scrollerLeft{
+    position: absolute;
+    color:whitesmoke;
+    cursor: pointer;
+    bottom: 50px;
+    top:50px;
+    left:20px;
+    z-index: 40;
+    font-size: 24px;
+    opacity: 0;
+}
+
+.scrollerRight{
+    position: absolute;
+    right:20px;
+    color:whitesmoke;
+    bottom: 50px;
+    top:50px;
+    cursor: pointer;
+    font-size: 24px;
+    opacity: 0;
+}
+
+.thumbnailWrapper{
+    height:10rem;
+    border:1px solid white;
+    width: 100%;
+}
+
+
+.rowParent:hover > .scrollerWrapper>.scrollerLeft{
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    /* transform:scale(1.06); */
+}
+
+.rowParent:hover > .scrollerWrapper>.scrollerRight{
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    /* transform:scale(1.06); */
+}
+
+
+@media screen and (max-width:768px){
+    .rowTitle{
+        font-size: 18px;
+    }
+}

@@ -1,18 +1,38 @@
 import Head from "next/head";
 import Banner from "../components/Banner";
 import Header from "../components/Header";
+import Row from "../components/Row";
 import requests from "../utils/requests";
 
-export default function Home({ netflixOriginals }) {
+export default function Home({
+  netflixOriginals,
+  trendingNow,
+  topRated,
+  actionMovies,
+  comedyMovies,
+  horrorMovies,
+  romanceMovies,
+  documentaries,
+}) {
   return (
     <div className="parent">
-      {console.log(netflixOriginals)}
       <Head>
         <title>Netflix</title>
       </Head>
       <Header />
       <main>
         <Banner netflixOriginals={netflixOriginals} />
+        <section className="rowWrapper">
+          {/* mylist component  */}
+          <Row title="Netflix Originals" movies={netflixOriginals} />
+          <Row title="Trending Now" movies={trendingNow} />
+          <Row title="Top Rated" movies={topRated} />
+          <Row title="Action" movies={actionMovies} />
+          <Row title="Comedy" movies={comedyMovies} />
+          <Row title="Horror" movies={horrorMovies} />
+          <Row title="Romance" movies={romanceMovies} />
+          <Row title="Documentaries" movies={documentaries} />
+        </section>
       </main>
     </div>
   );

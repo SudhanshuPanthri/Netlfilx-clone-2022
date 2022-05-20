@@ -40,6 +40,10 @@ a {
   background-image: linear-gradient( rgba(56, 56, 56, 0.878), #010511);
 }
 
+.rowWrapper{
+  z-index:40;
+}
+
 /* for medium/large devices  */
 
 @media screen and (min-width:768px){
