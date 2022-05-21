@@ -2,6 +2,13 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
+    z-index: 100;
+}
+
+.blend{
+    height: 100%;
+    background-image: linear-gradient( to bottom,rgba(105, 105, 105, 0.1), #141414 150%);
+    z-index: 60;
 }
 
 .bannerWrapper{
@@ -22,12 +29,13 @@
     z-index:20;
     top:300px;
     margin:0 40px;
+    z-index: 70;
     color:whitesmoke;
 }
 
 .bannerInfo{
     position: absolute;
-    z-index:20;
+    z-index:70;
     font-size: 20px;
     justify-self: end;
     font-weight: 500;
@@ -45,6 +53,7 @@
     left:20px;
     z-index:30;
     display: flex;
+    z-index: 70;
 }
 
 .buttonWrapper{

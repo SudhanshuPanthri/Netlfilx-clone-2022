@@ -1,0 +1,90 @@
+.loginParent{
+    height: 100vh;
+    width:100vw;
+    background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/6e32b96a-d4be-4e44-a19b-1bd2d2279b51/ee068656-14b9-4821-89b4-53b4937d9f1c/IN-en-20220516-popsignuptwoweeks-perspective_alpha_website_large.jpg');
+}
+
+.loginHeader{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    z-index: 50;
+    top:0;
+    height: 20vh;
+    width: 100%;
+    padding:10px;
+}
+
+
+.blender{
+    height: 100%;
+    background-image: linear-gradient(to bottom,rgba(64, 64, 64, 0.3), #141414 100%);
+    z-index: 60;
+}
+
+.loginForm{
+    z-index: 50;
+    position: absolute;
+    height: auto;
+    width: 100%;
+    top:25%;
+    /* position: absolute; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inp{
+    width: 400px;
+    padding:15px;
+    outline: none;
+    border: none;
+    margin:10px 0;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.signInBtn{
+    background-color: #e50914;
+    font-size: 18px;
+    color:whitesmoke;
+    width:400px;
+    padding:15px;
+    border:none;
+    border-radius: 4px;
+    margin:20px 0;
+}
+
+.signInBtn:hover{
+    cursor: pointer;
+    opacity: 0.86;
+    transition:all 0.3s ease-in-out;
+}
+
+.signUp{
+    width:400px;
+    display: flex;
+    color:whitesmoke;
+    align-items: center;
+    justify-content: center;
+}
+
+.signUp>p{
+    font-size: 18px;
+}
+
+
+.signUp>button{
+    background-color: transparent;
+    color:whitesmoke;
+    border:none;
+    font-size: 18px;
+    padding:10px;
+}
+
+.signUp>button:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}

@@ -14,6 +14,7 @@ const Banner = ({ netflixOriginals }) => {
 
     return (
         <div className='bannerParent'>
+            <div className='blend'></div>
             <div className='bannerWrapper'>
                 <Image src={`${baseURL}${movie.backdrop_path || movie.poster_path}`} layout="fill" objectFit="cover" />
             </div>

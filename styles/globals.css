@@ -35,9 +35,11 @@ a {
 }
 
 .parent{
-  height: 100vh;
+  height: 100%;
   /* width:100vw; */
+  z-index: 100;
   background-image: linear-gradient( rgba(56, 56, 56, 0.878), #010511);
+  /* background-image: linear-gradient(to bottom,rgba(20,20,20,0) 0,rgba(20,20,20,0.15) 15%,rgba(20,20,20,0.35) 29%,rgba(20,20,20,0.58) 44%,#141414 68%,#141414 100%); */
 }
 
 .rowWrapper{
