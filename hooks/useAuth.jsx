@@ -64,7 +64,7 @@ export const AuthProvider = ({ children }) => {
             .finally(() => setLoading(false))
     }
 
-    const logout = async () => {
+    const logOut = async () => {
         setLoading(true)
 
         signOut(auth)
@@ -76,7 +76,7 @@ export const AuthProvider = ({ children }) => {
     }
 
     const memoedValue = useMemo(
-        () => ({ user, signUp, signIn, error, loading, logout }),
+        () => ({ user, signUp, signIn, error, loading, logOut }),
         [user, loading, error]
     )
 

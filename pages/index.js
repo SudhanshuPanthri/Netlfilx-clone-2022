@@ -3,6 +3,8 @@ import Banner from "../components/Banner";
 import Header from "../components/Header";
 import Row from "../components/Row";
 import requests from "../utils/requests";
+import useAuth from "../hooks/useAuth";
+// import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 export default function Home({
   netflixOriginals,
@@ -14,6 +16,9 @@ export default function Home({
   romanceMovies,
   documentaries,
 }) {
+  const { loading } = useAuth();
+  if (loading) return null;
+
   return (
     <div className="">
       <Head>

@@ -5,10 +5,12 @@ import { BsSearch } from 'react-icons/bs'
 import { AiFillBell } from 'react-icons/ai'
 import { MdAccountCircle } from 'react-icons/md'
 import Link from 'next/link'
+import useAuth from '../hooks/useAuth'
 
 const Header = () => {
 
     const [isScrolled, setIsScrolled] = useState(false)
+    const { logOut } = useAuth()
 
     useEffect(() => {
         const handleScroll = () => {
@@ -44,9 +46,9 @@ const Header = () => {
                 <BsSearch className='icon' />
                 <p className='hidden'>Kids</p>
                 <AiFillBell className='icon' />
-                <Link href='/account'>
-                    <MdAccountCircle className='icon' style={{ fontSize: '28px' }} />
-                </Link>
+                {/* <Link href='/account'> */}
+                <MdAccountCircle className='icon' style={{ fontSize: '28px' }} onClick={logOut} />
+                {/* </Link> */}
             </div>
         </header>
     )
