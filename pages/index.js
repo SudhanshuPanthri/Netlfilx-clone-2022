@@ -5,6 +5,9 @@ import Row from "../components/Row";
 import requests from "../utils/requests";
 import useAuth from "../hooks/useAuth";
 // import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import { useRecoilValue } from "recoil";
+import { modalState } from "../atom/modalAtom";
+import Modal from "../components/Modal";
 
 export default function Home({
   netflixOriginals,
@@ -17,6 +20,7 @@ export default function Home({
   documentaries,
 }) {
   const { loading } = useAuth();
+  const showModal = useRecoilValue(modalState);
   if (loading) return null;
 
   return (
@@ -39,6 +43,7 @@ export default function Home({
           <Row title="Documentaries" movies={documentaries} />
         </section>
       </main>
+      {showModal && <Modal />}
     </div>
   );
 }

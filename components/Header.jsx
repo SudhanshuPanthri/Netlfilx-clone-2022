@@ -4,8 +4,9 @@ import logo from '../assets/netflix.svg'
 import { BsSearch } from 'react-icons/bs'
 import { AiFillBell } from 'react-icons/ai'
 import { MdAccountCircle } from 'react-icons/md'
-import Link from 'next/link'
 import useAuth from '../hooks/useAuth'
+
+
 
 const Header = () => {
 

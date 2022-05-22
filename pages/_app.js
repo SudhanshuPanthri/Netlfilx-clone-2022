@@ -4,13 +4,17 @@ import "../styles/Banner.css";
 import "../styles/Row.css";
 import "../styles/Thumbnail.css";
 import "../styles/Login.css";
+import "../styles/Modal.css";
 import { AuthProvider } from "../hooks/useAuth";
+import { RecoilRoot } from "recoil";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <AuthProvider>
-      <Component {...pageProps} />
-    </AuthProvider>
+    <RecoilRoot>
+      <AuthProvider>
+        <Component {...pageProps} />
+      </AuthProvider>
+    </RecoilRoot>
   );
 }
 
