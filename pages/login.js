@@ -4,11 +4,9 @@ import React, { useState } from "react";
 import logo from "../assets/netflix.svg";
 import { useForm } from "react-hook-form";
 import useAuth from "../hooks/useAuth";
-import { useRouter } from "next/router";
 
-const login = () => {
+const Login = () => {
   const [login, setLogin] = useState(false);
-  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -67,4 +65,4 @@ const login = () => {
   );
 };
 
-export default login;
+export default Login;
