@@ -4,7 +4,7 @@ import { useRecoilState } from 'recoil'
 import { modalState, movieState } from '../atom/modalAtom'
 import { AiFillCloseCircle, AiFillPlusCircle, AiFillLike } from 'react-icons/ai'
 import ReactPlayer from 'react-player/lazy'
-import { BsFillPlayFill, BsVolumeMute } from 'react-icons/bs'
+import { BsFillPlayFill, BsVolumeMute, BsFillVolumeUpFill } from 'react-icons/bs'
 
 const Modal = () => {
     const [showModal, setShowModal] = useRecoilState(modalState);
@@ -12,6 +12,7 @@ const Modal = () => {
     const [trailer, setTrailer] = useState('')
     const [genres, setGenres] = useState([]);
     const [muted, setMuted] = useState(false);
+    const [play, setPlay] = useState(true);
 
     const handleClose = () => {
         setShowModal(false)
@@ -49,13 +50,13 @@ const Modal = () => {
                         width="100%"
                         height="100%"
                         style={{ position: 'absolute', top: '0', left: '0' }}
-                        playing
+                        playing={play}
                         muted={muted}
                     />
                 </div>
                 <div>
                     <div className='modalPlayButton'>
-                        <button className='playBtn'>
+                        <button className='playBtn' onClick={() => setPlay(!play)}>
                             <BsFillPlayFill style={{ fontSize: '24px', }} />
                             Play
                         </button>
@@ -67,14 +68,37 @@ const Modal = () => {
                         </button>
                     </div>
                     <button className='mute' onClick={() => setMuted(!muted)}>
-                        <BsVolumeMute style={{ fontSize: '36', color: 'whitesmoke', margin: '0 10px' }} />
+                        {
+                            muted ? (
+                                <BsVolumeMute style={{ fontSize: '36', color: 'whitesmoke', margin: '0 10px' }} />
+                            )
+                                :
+                                (
+                                    <BsFillVolumeUpFill style={{ fontSize: '36', color: 'whitesmoke', margin: '0 10px' }} />
+                                )
+                        }
                     </button>
                 </div>
                 <div className='infoWrapper'>
-                    <div>likes</div>
+                    <div className='upperWrapper'>
+                        <p style={{ color: 'green' }}>{movie.vote_average * 10}% Match</p>
+                        <p style={{ color: 'whitesmoke' }}>{movie?.release_date || movie?.first_air_date}</p>
+                        <div className='hdWrapper'><span>HD</span></div>
+                    </div>
                     <div className='bottomWrapper'>
-                        <div>info</div>
-                        <div>genre</div>
+                        <div className='overview'><p style={{ color: 'whitesmoke' }}>{movie.overview}</p></div>
+                        <div className='genre'>
+                            <span style={{ color: 'grey' }}>Genre : &nbsp;</span>
+                            {genres.map((genre) => genre.name).join(', ')}
+                        </div>
+                        <div style={{ color: 'whitesmoke' }}>
+                            <span style={{ color: 'grey' }}>Original Language: &nbsp;</span>
+                            {movie?.original_language}
+                        </div>
+                        <div style={{ color: 'whitesmoke' }}>
+                            <span style={{ color: 'grey' }}>Total Votes: &nbsp;</span>
+                            {movie?.vote_count}
+                        </div>
                     </div>
                 </div>
             </>
