@@ -14,7 +14,6 @@ const Login = () => {
   } = useForm();
   const { signIn, signUp } = useAuth();
   const onSubmit = async ({ email, password }) => {
-    console.log(email, " ", password);
     if (login) {
       await signIn(email, password);
     } else {

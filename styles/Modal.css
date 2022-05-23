@@ -44,7 +44,6 @@
     z-index: 50;
     bottom:42%;
     left:40px;
-    /* background-color: black; */
     padding:10px;
     background: rgba(0,0,0,0.65);
     backdrop-filter: saturate(180%) blur(10px);
@@ -139,4 +138,29 @@
 
 .genre{
     color:whitesmoke;
+}
+
+@media screen and (max-width:800px){
+    .modal{
+        width:100%;
+        height: 100vh;
+        top:0 !important;
+    }
+
+    .modalPlayButton{
+        left:0;
+        /* background:none !important; */
+        backdrop-filter: none;  
+        width:150px; 
+    }
+
+    .playBtn{
+        /* width:28%; */
+        display: none;
+    }
+
+    .mute{
+        top:52%;
+        border:1px solid green;
+    }
 }

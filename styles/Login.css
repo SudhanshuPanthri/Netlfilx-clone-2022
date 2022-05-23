@@ -2,6 +2,9 @@
     height: 100vh;
     width:100vw;
     background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/6e32b96a-d4be-4e44-a19b-1bd2d2279b51/ee068656-14b9-4821-89b4-53b4937d9f1c/IN-en-20220516-popsignuptwoweeks-perspective_alpha_website_large.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .loginHeader{
@@ -29,7 +32,6 @@
     height: auto;
     width: 100%;
     top:25%;
-    /* position: absolute; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -87,4 +89,16 @@
 .signUp>button:hover{
     text-decoration: underline;
     cursor: pointer;
+}
+
+@media screen and (max-width:568px){
+    .loginParent{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .inp,.signInBtn{
+        width:320px;
+    }
 }
